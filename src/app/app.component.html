@@ -15,17 +15,28 @@
         </div>
 
         <div class="form-group">
+          <label class="center-block">Email:
+            <input class="form-control" formControlName="email">
+          </label>
+        </div>
+        <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+
+            Email Invalid.
+
+        </div>
+
+        <div class="form-group">
           <label class="center-block">Phone:
             <input class="form-control" formControlName="phone">
           </label>
         </div>
         <div *ngIf="angForm.controls['phone'].invalid && (angForm.controls['phone'].dirty || angForm.controls['phone'].touched)" >
             <div *ngIf="angForm.controls['phone'].errors?.['required']" class="alert alert-danger">
-          Required
+         Phone Required
           </div>
         </div>
         <div *ngIf="angForm.controls['phone'].invalid && (angForm.controls['phone'].dirty || angForm.controls['phone'].touched)" class="alert alert-danger">       
-          pattern not match       
+          Phone Pattern  not match       
       </div>
   </form>
 <p>Form value: {{ angForm.value | json }}</p>
