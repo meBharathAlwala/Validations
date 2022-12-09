@@ -2,6 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 
+Email:validation criteria
+1) Email must contain value.
+2) Must contain only one  "@" symbol
+3) Invalid charactors:  "\"" , "(", ")",",",":",";","<",">","[" ,"\\","]"
+4) should not contain  "." at first position.( ex: .test@gmail.com not allowed)
+5) should not contain "." at last  position. ( ex: test@gmail.com. not allowed)
+6) should not contain space.
+7) should not contain ..(double dot)  (ex: test@gmail..com not allowed)
+
+ Checking for (@)
+ at related rules chars
+
+1) should not contain "@" at first position. 
+2) should not contain "@" at last  position.
+3) @ shoud not contain immediate before . or after . (ex: test.@gmail.com or test@.gmail.com not allowed)
+4) must contain . after @
+
+
+Domain:
+1) Domain length shoud have min 2.
+2) Domain length shoud have max 13.
+3) Domain should not contain  numbers. (ex: test@gmail.com123 not allowed)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
